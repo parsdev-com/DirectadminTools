@@ -19,7 +19,7 @@ wget https://raw.githubusercontent.com/parsdev-com/DirectadminTools/main/FixCage
 ```
 wget https://raw.githubusercontent.com/parsdev-com/DirectadminTools/main/NamedCheck.sh;chmod +x NamedCheck.sh;./NamedCheck.sh
 ```
-#### Recovery Orphaned Directadmin Server:
+#### Recovery Orphaned Directadmin Server: (Expert Users)
 ```
 wget https://raw.githubusercontent.com/parsdev-com/DirectadminTools/main/DaRecovery.sh;chmod +x DaRecovery.sh;./DaRecovery.sh
 ```
