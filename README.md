@@ -6,7 +6,7 @@ Bash tools for easy working with DirectAdmin
 wget https://raw.githubusercontent.com/parsdev-com/DirectadminTools/main/ChnageMainServerIP.sh;chmod +x ChnageMainServerIP.sh;./ChnageMainServerIP.sh
 ```
 
-#### Directadmin Manaul Update:
+#### Directadmin Manual Update:
 ```
 wget https://raw.githubusercontent.com/parsdev-com/DirectadminTools/main/ManaulUpdate.sh;chmod +x ManaulUpdate.sh;./ManaulUpdate.sh
 ```
