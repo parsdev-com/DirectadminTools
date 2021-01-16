@@ -1,0 +1,1 @@
+for H in $(find /home/ -mindepth 1 -maxdepth 1 -type d); do U=${H##*/}; P=$H/.cagefs/tmp; [[ -d $P ]] || continue; [[ "$(stat -c %U:%G $P)" == "$U:$U" ]] && continue; echo "Fixing permissions for $P"; chown -R $U:$U $P; done
