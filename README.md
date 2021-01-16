@@ -15,7 +15,7 @@ wget https://raw.githubusercontent.com/parsdev-com/DirectadminTools/main/ManualU
 ```
 wget https://raw.githubusercontent.com/parsdev-com/DirectadminTools/main/FixCageFSPermission.sh;chmod+x FixCageFSPermission.sh;./FixCageFSPermission.sh
 ```
-#### Find the domain that caused the Named error:
+#### Find domain that caused the Named error:
 ```
 wget https://raw.githubusercontent.com/parsdev-com/DirectadminTools/main/NamedCheck.sh;chmod +x NamedCheck.sh;./NamedCheck.sh
 ```
