@@ -9,12 +9,6 @@ read LIPOLD
 echo 4 - NEW Main IP :
 read LIP
 echo -----------------------------------------------
-echo update directadmin license....
-echo -----------------------------------------------
-cd /usr/local/directadmin/scripts
-./getLicense.sh $UID $LID
-systemctl restart directadmin
-echo -----------------------------------------------
 echo IP Swapping....
 echo -----------------------------------------------
 cd /usr/local/directadmin/scripts
@@ -28,13 +22,9 @@ systemctl restart pure-ftpd
 systemctl restart exim
 systemctl restart dovecot
 echo -----------------------------------------------
-echo update directadmin core...
+echo update directadmin license....
 echo -----------------------------------------------
-cd /usr/local/directadmin
-wget --no-check-certificate -O update.tar.gz "https://www.directadmin.com/cgi-bin/daupdate?uid=$UID&lid=$LID"
-tar xvzf update.tar.gz
-./directadmin p
-cd scripts
-./update.sh
+cd /usr/local/directadmin/scripts
+./getLicense.sh $UID $LID
 systemctl restart directadmin
 echo -----------------------------------------------
