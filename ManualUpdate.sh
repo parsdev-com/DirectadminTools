@@ -1,16 +1,7 @@
-#!/bin/bash
-echo "-----------------------------------------------"
-echo "1 - Directadmin User ID - UID :"
-read UID
-echo "2 - Directadmin License ID - LID :"
-read LID
-echo ----------------------------------------------
-echo update directadmin core...
-echo -----------------------------------------------
-cd /usr/local/directadmin
-wget --no-check-certificate -O update.tar.gz "https://www.directadmin.com/cgi-bin/daupdate?uid=$UID&lid=$LID"
-tar xvzf update.tar.gz
-./directadmin p
-cd scripts
-./update.sh
+COMMIT=$(dig +short -t txt "current-version.directadmin.com" | sed 's|.*commit=\([0-9a-f]*\).*|\1|')
+wget "https://download.directadmin.com/directadmin_${COMMIT}_linux_amd64.tar.gz" -O "/usr/local/directadmin/update.tar.gz"
+tar xzf /usr/local/directadmin/update.tar.gz -C /usr/local/directadmin
+/usr/local/directadmin/directadmin p
+/usr/local/directadmin/scripts/update.sh
 systemctl restart directadmin
+rm /usr/local/directadmin/update.tar.gz
