@@ -8,7 +8,7 @@ wget https://raw.githubusercontent.com/parsdev-com/DirectadminTools/main/ChnageM
 
 #### Directadmin Manual Update:
 ```
-wget https://raw.githubusercontent.com/parsdev-com/DirectadminTools/main/ManualUpdate.sh;chmod +x ManaulUpdate.sh;./ManaulUpdate.sh
+wget https://raw.githubusercontent.com/parsdev-com/DirectadminTools/main/ManualUpdate.sh;chmod +x ManualUpdate.sh;./ManualUpdate.sh
 ```
 
 #### Fix CloudLinux CageFS Permission:
