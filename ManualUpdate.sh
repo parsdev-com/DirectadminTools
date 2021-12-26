@@ -1,10 +1,10 @@
 #!/bin/bash
-echo -----------------------------------------------
-echo 1 - Directadmin User ID - UID :
+echo "-----------------------------------------------"
+echo "1 - Directadmin User ID - UID :"
 read UID
-echo 2 - Directadmin License ID - LID :
+echo "2 - Directadmin License ID - LID :"
 read LID
-echo -----------------------------------------------
+echo ----------------------------------------------
 echo update directadmin core...
 echo -----------------------------------------------
 cd /usr/local/directadmin
