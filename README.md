@@ -1,11 +1,6 @@
 # DirectadminTools
 Bash tools for easy working with DirectAdmin
 
-#### Directadmin License update TLS Problem
-```
-wget https://raw.githubusercontent.com/parsdev-com/DirectadminTools/main/dalicense.sh;chmod +x dalicense.sh;./dalicense.sh
-```
-
 #### Change the Main IP of DirecAdmin:
 ```
 wget https://raw.githubusercontent.com/parsdev-com/DirectadminTools/main/ChnageMainServerIP.sh;chmod +x ChnageMainServerIP.sh;./ChnageMainServerIP.sh
