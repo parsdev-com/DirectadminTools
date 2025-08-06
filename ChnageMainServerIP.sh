@@ -1,13 +1,18 @@
 #!/bin/bash
 echo -----------------------------------------------
-echo 1 - Directadmin User ID - UID :
-read UID
-echo 2 - Directadmin License ID - LID :
+echo 1 - Directadmin License Key :
 read LID
-echo 3 - OLD Main IP :
+echo 2 - OLD Main IP :
 read LIPOLD
-echo 4 - NEW Main IP :
-read LIP
+getip() {
+    local _ip _line
+    while IFS=$': \t' read -a _line ;do
+        [ -z "${_line%inet}" ] &&
+           _ip=${_line[${#_line[1]}>4?1:2]} &&
+           [ "${_ip#127.0.0.1}" ] && echo $_ip && return 0
+      done< <(LANG=C /sbin/ifconfig)
+}
+LIP=$(getip)
 echo -----------------------------------------------
 echo IP Swapping....
 echo -----------------------------------------------
@@ -24,7 +29,6 @@ systemctl restart dovecot
 echo -----------------------------------------------
 echo update directadmin license....
 echo -----------------------------------------------
-cd /usr/local/directadmin/scripts
-./getLicense.sh $UID $LID
+/usr/local/directadmin/scripts/getLicense.sh $LID
 systemctl restart directadmin
 echo -----------------------------------------------
